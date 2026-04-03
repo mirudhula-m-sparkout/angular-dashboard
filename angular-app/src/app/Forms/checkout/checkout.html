@@ -1,0 +1,21 @@
+<h1>Checkout Payment</h1>
+
+<form #payForm="ngForm" (ngSubmit)="submitCheckout(payForm)">
+
+  <input 
+  type="text" 
+  name="cardNumber" 
+  ngModel #cardRef="ngModel" 
+  required minlength="16" 
+  placeholder="Card Number">
+
+  <div *ngIf="cardRef.invalid && cardRef.touched">Card number invalid!</div>
+
+  <input 
+  type="text" 
+  name="expiry" 
+  ngModel required 
+  placeholder="MM/YY">
+
+  <button type="submit">Pay</button>
+</form>

@@ -1,0 +1,21 @@
+<h1>Edit Profile</h1>
+
+<form #profileForm="ngForm">
+
+  <label>Name:</label>
+  <input 
+  type="text" 
+  name="name" 
+  [(ngModel)]="profile.name">
+  
+  <p>Your name live: {{ profile.name }}</p>
+
+  <label>Email:</label>
+  <input 
+  type="email" 
+  name="email" 
+  [(ngModel)]="profile.email">
+
+  <p>Your email live: {{ profile.email }}</p>
+
+</form>

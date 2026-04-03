@@ -1,0 +1,29 @@
+<h1>Feedback-Form</h1>
+
+<h2>Feedback Form</h2>
+
+<form #fbForm="ngForm" (ngSubmit)="submitFeedback(fbForm)">
+
+  <input 
+  type="text" 
+  name="name" 
+  ngModel 
+  #nameRef="ngModel" 
+  required 
+  placeholder="Your Name">
+
+  <div *ngIf="nameRef.invalid && nameRef.touched">Name required!</div>
+
+  <input 
+  type="email" 
+  name="email" 
+  ngModel 
+  #emailRef="ngModel" 
+  required 
+  placeholder="Your Email">
+
+  <div *ngIf="emailRef.invalid && emailRef.touched">Email required!</div>
+  <textarea name="message" ngModel required placeholder="Your Message"></textarea>
+  <button type="submit">Submit Feedback</button>
+
+</form>

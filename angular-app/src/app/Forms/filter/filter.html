@@ -1,0 +1,26 @@
+<h2>Product Filters</h2>
+
+<form #filterForm="ngForm">
+
+  <label>Category:</label>
+  <input 
+  type="text" 
+  name="category" 
+  [(ngModel)]="filters.category">
+
+  <p>Selected category: {{ filters.category }}</p>
+
+  <label>Price Min:</label>
+  <input 
+  type="number" 
+  name="priceMin" 
+  [(ngModel)]="filters.priceMin">
+
+  <label>Price Max:</label>
+  <input 
+  type="number" 
+  name="priceMax" 
+  [(ngModel)]="filters.priceMax">
+
+  <p>Price Range: {{ filters.priceMin }} - {{ filters.priceMax }}</p>
+</form>

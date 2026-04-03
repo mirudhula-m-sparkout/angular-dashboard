@@ -1,0 +1,25 @@
+<h2>Login Form</h2>
+
+<form #loginForm="ngForm" (ngSubmit)="submitLogin(loginForm)">
+
+  <input 
+  type="email" 
+  name="email" 
+  ngModel #emailRef="ngModel" 
+  required placeholder="Enter Email">
+
+  <div *ngIf="emailRef.invalid && emailRef.touched">Email required!</div>
+
+  <input 
+  type="password" 
+  name="password" 
+  ngModel 
+  #passRef="ngModel" 
+  required 
+  minlength="6" 
+  placeholder="Enter Password">
+  
+  <div *ngIf="passRef.invalid && passRef.touched">Password min 6 chars!</div>
+  <button type="submit">Login</button>
+
+</form>
