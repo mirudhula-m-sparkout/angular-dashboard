@@ -1,0 +1,19 @@
+<h1>Reactive Forms</h1>
+<h1>Form1</h1>
+<form [formGroup]="resumeForm" (ngSubmit)="onSubmit()">
+
+  <input formControlName="name" placeholder="Enter Name">
+  <input formControlName="email" placeholder="Enter Email">
+
+  <div formArrayName="skills">
+    <div *ngFor="let skill of skills.controls; let i = index">
+      <input [formControlName]="i" placeholder="Enter Skill">
+    </div>
+  </div>
+
+  <button type="button" (click)="addSkill()">Add Skill</button>
+  
+
+  <button type="submit">Submit</button>
+
+</form>
