@@ -1,0 +1,10 @@
+<h1>1. Userlist-data</h1>
+
+<div *ngIf="loading">Loading......</div>
+<div *ngIf="errormsg">{{errormsg}}</div>
+
+<ul>
+  <li *ngFor="let user of users">
+    {{user.name}}
+  </li>
+</ul>

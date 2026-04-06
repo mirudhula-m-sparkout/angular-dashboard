@@ -1,0 +1,7 @@
+<h3>Transaction History</h3>
+
+<ul>
+  <li *ngFor="let txn of transactions">
+    {{ txn.txnId }} - ₹{{ txn.amount }}
+  </li>
+</ul>
