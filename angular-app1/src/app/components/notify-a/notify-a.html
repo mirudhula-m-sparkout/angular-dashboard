@@ -1,0 +1,12 @@
+<h3>Component A</h3>
+
+<button (click)="send()">Send A Message</button>
+
+<button routerLink="sub1">Sub A1</button>
+<button routerLink="sub2">Sub A2</button>
+
+<div *ngFor="let m of list">
+  {{ m }}
+</div>
+
+<router-outlet></router-outlet>
