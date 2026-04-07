@@ -1,0 +1,11 @@
+<h2>Full User Data</h2>
+<table border="1">
+  <tr>
+    <th>Name</th>
+    <th>Status</th>
+  </tr>
+  <tr *ngFor="let u of users">
+    <td>{{u.name}}</td>
+    <td>{{u.info}}</td>
+  </tr>
+</table>

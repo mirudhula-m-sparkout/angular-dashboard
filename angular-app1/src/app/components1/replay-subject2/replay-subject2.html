@@ -1,0 +1,13 @@
+<h1>This is ReplaySubject2</h1>
+
+<nav class="nav-tabs">
+  <button (click)="activeTab='dashboard'" [class.active]="activeTab==='dashboard'">Dashboard</button>
+  <button (click)="activeTab='notifications'" [class.active]="activeTab==='notifications'">Notifications</button>
+  <button (click)="activeTab='history'" [class.active]="activeTab==='history'">History</button>
+</nav>
+
+<div>
+  <app-dashboard *ngIf="activeTab==='dashboard'"></app-dashboard>
+  <app-notifications *ngIf="activeTab==='notifications'"></app-notifications>
+  <app-history *ngIf="activeTab==='history'"></app-history>
+</div>
