@@ -13,3 +13,4 @@ import { RouterLink } from '@angular/router';
 export class App {
   protected readonly title = signal('angular-app1');
 }
+
