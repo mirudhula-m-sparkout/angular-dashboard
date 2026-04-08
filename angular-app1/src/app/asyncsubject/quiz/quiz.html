@@ -1,0 +1,9 @@
+<h1>Quiz questions below</h1>
+
+<ul>
+  <li *ngFor="let q of questions; let i =index">
+    {{q}}
+    <button (click)="correctanswer(i)">Correct</button>
+  </li>
+</ul>
+<button (click)="submit()">Submit-quiz</button>
