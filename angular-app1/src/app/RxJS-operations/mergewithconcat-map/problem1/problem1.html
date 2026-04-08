@@ -1,1 +1,9 @@
-<p>problem1 works!</p>
+<h2>MergeMap vs ConcatMap Demo</h2>
+
+<button (click)="uploadWithMergeMap()">Upload Files (mergeMap)</button>
+<button (click)="uploadWithConcatMap()">Upload Files (concatMap)</button>
+
+<h3>Logs:</h3>
+<ul>
+  <li *ngFor="let log of logs">{{ log }}</li>
+</ul>
