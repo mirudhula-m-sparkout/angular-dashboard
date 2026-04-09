@@ -1,0 +1,21 @@
+<h3>Tap Examples</h3>
+<h4>tap = RxJS operator for side-effects</h4>
+<p>
+What tap actually means:<br>
+<b>tap = “peek and do something, but don’t change the data”</b><br>
+You look at the data flowing through, do small side-actions like:<br>
+Logging<br>
+Counting<br>
+Showing/hiding spinner<br>
+Triggering analytics<br>
+The key thing: data keeps flowing unchanged to the next step
+</p>
+
+
+<button routerLink="tap1">Tap1</button>
+<button routerLink="tap2">Tap2</button>
+
+<hr>
+<router-outlet></router-outlet>
+
+

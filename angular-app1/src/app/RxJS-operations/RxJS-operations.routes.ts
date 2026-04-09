@@ -21,7 +21,26 @@ export const routes: Routes = [
         path:'mergewithconcat-map',
         loadChildren: () =>
           import('./mergewithconcat-map.routes').then(m => m.routes)
-
+      },
+      {
+        path:'deboucemap',
+        loadChildren: () =>
+          import('./deboucemap/debounce.routes').then(m => m.routes)
+      },
+      {
+        path:'forkjoin',
+        loadChildren: () =>
+          import('./forkjoin/forkjoin.routes').then(m =>m.routes)
+      },
+      {
+        path:'tap',
+        loadChildren: () =>
+          import('./tap/tap.routes').then(m=> m.routes)
+      },
+      {
+        path :'catchwithfinal',
+        loadChildren: () =>
+          import('./catchwithfinalize/catchwithfinal.routes').then(m=> m.routes)
       }
     ]
   }

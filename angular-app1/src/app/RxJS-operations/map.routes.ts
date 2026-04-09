@@ -4,6 +4,7 @@ import { NumberDouble } from './map/number-double/number-double';
 import { Uppercase } from './map/uppercase/uppercase';
 import { ApiClean } from './map/api-clean/api-clean';
 
+
 export const routes: Routes = [
   {
     path: '',
