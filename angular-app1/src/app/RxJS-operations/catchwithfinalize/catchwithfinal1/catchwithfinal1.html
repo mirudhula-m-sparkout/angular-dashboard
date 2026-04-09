@@ -1,0 +1,14 @@
+
+
+<button (click)="fetchContent()">
+  Fetch Content
+</button>
+<div *ngIf="loading">
+  Loading...
+</div>
+<div *ngIf="error">
+  {{ error }}
+</div>
+<div *ngIf="data">
+  {{ data }}
+</div>
