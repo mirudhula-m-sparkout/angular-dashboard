@@ -1,0 +1,32 @@
+
+<h3>Multiple User Details in List Cards<br>
+What it does?<br>
+You fetch multiple users at the same time and list them as profile cards.</h3>
+
+<!--
+Second Code (multiple users)
+const calls = [
+  this.http.get('users/1'),
+  this.http.get('users/2'),
+  this.http.get('users/3')
+];
+forkJoin(calls)
+Structure: array [ call1, call2, call3 ]
+Result: array of results
+results = [
+  {...user1},
+  {...user2},
+  {...user3}
+]
+Use-case:
+Multiple independent calls, same type of data
+-->
+<div *ngIf="loading">Loading...</div>
+
+<div *ngIf="!loading" class="container">
+  <div *ngFor="let u of users" class="card">
+    <h3>{{ u.name }}</h3>
+    <p><b>Email:</b> {{ u.email }}</p>
+    <p><b>City:</b> {{ u.address?.city }}</p>
+  </div>
+</div>
