@@ -3,12 +3,11 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { TaskService, Task } from '../../services/taskservice';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { Navbar } from '../navbar/navbar';
 
 @Component({
   selector: 'app-taskdetail',
   standalone: true,
-  imports: [CommonModule, RouterModule, Navbar],
+  imports: [CommonModule, RouterModule],
   templateUrl: './taskdetail.html',
   styleUrl: './taskdetail.css',
 })

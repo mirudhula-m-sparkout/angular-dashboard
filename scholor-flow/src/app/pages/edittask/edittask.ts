@@ -3,15 +3,13 @@ import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { TaskService, Task } from '../../services/taskservice';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { Navbar } from '../navbar/navbar';
 
 @Component({
   selector: 'app-edittask',
   imports: [
     CommonModule, 
     FormsModule, 
-    RouterModule, 
-    Navbar
+    RouterModule
   ],
   templateUrl: './edittask.html',
   styleUrl: './edittask.css',

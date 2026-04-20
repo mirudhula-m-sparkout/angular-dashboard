@@ -1,12 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { TaskService } from '../../services/taskservice';
 import { RouterModule } from '@angular/router';
-import { Navbar } from '../navbar/navbar';
 
 @Component({
   selector: 'app-dashboard',
   standalone: true,
-  imports: [RouterModule, Navbar],
+  imports: [RouterModule],
   templateUrl: './dashboard.html',
   styleUrl: './dashboard.css',
 })

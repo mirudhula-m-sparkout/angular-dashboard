@@ -8,19 +8,16 @@ export class AuthService {
 
   constructor(private router: Router) {}
 
-  //check in the browser
-  isBrowser(): boolean {
+  private isBrowser(): boolean {
     return typeof window !== 'undefined';
   }
 
-  //login
-  login() {
+  login(): void {
     if (this.isBrowser()) {
       localStorage.setItem('auth', 'true');
     }
   }
 
-  //check auth
   isAuthenticated(): boolean {
     if (this.isBrowser()) {
       return localStorage.getItem('auth') === 'true';
@@ -28,9 +25,7 @@ export class AuthService {
     return false;
   }
 
-  
-  //logout
-  logout() {
+  logout(): void {
     if (this.isBrowser()) {
       localStorage.removeItem('auth');
     }

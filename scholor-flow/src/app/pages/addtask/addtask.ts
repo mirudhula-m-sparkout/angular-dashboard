@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
-import { TaskService, Task } from '../../services/taskservice'; // ✅ import Task
+import { TaskService, Task } from '../../services/taskservice'; 
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
-import { Navbar } from '../navbar/navbar';
 
 @Component({
   selector: 'app-addtask',
@@ -12,8 +11,7 @@ import { Navbar } from '../navbar/navbar';
   imports: [
     RouterModule,
     CommonModule,
-    FormsModule,
-    Navbar
+    FormsModule
   ],
   templateUrl: './addtask.html',
   styleUrl: './addtask.css',

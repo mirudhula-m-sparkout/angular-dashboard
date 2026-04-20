@@ -1,12 +1,26 @@
 import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
+import { AuthService } from '../../services/authservice';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-navbar',
+  standalone: true,
   imports: [
-    RouterModule
+    RouterModule,
+    CommonModule
   ],
   templateUrl: './navbar.html',
   styleUrl: './navbar.css',
 })
-export class Navbar {}
+export class Navbar {
+
+  constructor(
+    public auth: AuthService,
+    private router: Router
+  ) {}
+
+  logout() {
+    this.auth.logout();
+  }
+}
