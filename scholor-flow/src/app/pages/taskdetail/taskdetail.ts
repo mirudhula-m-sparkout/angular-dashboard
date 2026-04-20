@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectorRef } from '@angular/core'; // ✅ ADD
+import { Component, OnInit, ChangeDetectorRef } from '@angular/core'; 
 import { ActivatedRoute, Router } from '@angular/router';
 import { TaskService, Task } from '../../services/taskservice';
 import { CommonModule } from '@angular/common';
@@ -7,7 +7,10 @@ import { RouterModule } from '@angular/router';
 @Component({
   selector: 'app-taskdetail',
   standalone: true,
-  imports: [CommonModule, RouterModule],
+  imports: [
+    CommonModule, 
+    RouterModule
+  ],
   templateUrl: './taskdetail.html',
   styleUrl: './taskdetail.css',
 })
