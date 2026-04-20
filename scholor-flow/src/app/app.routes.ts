@@ -12,7 +12,6 @@ import { Deletetask } from './pages/deletetask/deletetask';
 
 export const routes: Routes = [
 
-  // ✅ FIX: smart default route
   {
     path: '',
     loadComponent: () => import('./pages/login/login').then(m => m.Login)
