@@ -70,27 +70,27 @@ Angular-based Task Manager application with authentication and task tracking fea
 ## Screenshots
 
 ### Login Page
-![Login](screenshots/login.png)
+![Login](/scholor-flow/screenshots/login.png)
 
 ### Signup
-![Signup](screenshots/signup.png)
+![Signup](/scholor-flow/screenshots/signup.png)
 
 
 ### Dashboard
-![Dashboard](D:\MyAngularProject\scholor-flow\public\screenshots\dashboard.png)
+![Dashboard](/scholor-flow/screenshots/dashboard.png)
 
 ### Task List
-![Task List](screenshots/tasklist.png)
+![Task List](/scholor-flow/screenshots/tasklist.png)
 
 ### Task Detail
-![Task Detail](screenshots/taskdetail.png)
+![Task Detail](/scholor-flow/screenshots/taskdetail.png)
 
 
 ### Task Update
-![Task Update](screenshots/taskupdate.png)
+![Task Update](/scholor-flow/screenshots/taskupdate.png)
 
 ### Task Delete
-![Task Delete](screenshots/taskdel.png)
+![Task Delete](/scholor-flow/screenshots/taskdel.png)
 
 
 ---
