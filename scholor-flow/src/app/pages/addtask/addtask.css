@@ -1,0 +1,54 @@
+.page {
+  font-family: 'Segoe UI';
+  background: #fd7e7e;
+  min-height: 100vh;
+}
+
+.content {
+  padding: 20px;
+}
+
+/* form */
+.form {
+  max-width: 400px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* input */
+input, textarea {
+  padding: 8px;
+  border: 1px solid #ccc;
+}
+
+/* priority */
+.priority {
+  display: flex;
+  gap: 5px;
+}
+
+.priority button {
+
+  /*flex 1 - each btn should take equal share of available horizontal space*/
+
+  flex: 1;
+  padding: 6px;
+  border: 1px solid #ccc;
+  background: white;
+}
+
+/* selected */
+.priority button.active {
+  background: #2f6fed;
+  color: white;
+}
+
+/* submit*/
+.submit {
+  background: #2f6fed;
+  color: white;
+  border: none;
+  padding: 8px;
+}

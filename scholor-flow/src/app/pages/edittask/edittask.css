@@ -1,0 +1,134 @@
+.page {
+  background: #f5f7fb;
+  min-height: 100vh;
+  font-family: 'Segoe UI';
+}
+
+.container {
+  padding: 20px 40px;
+}
+
+.breadcrumb {
+  color: gray;
+  margin-bottom: 10px;
+}
+
+h1 {
+  margin: 5px 0;
+}
+
+.sub {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* LAYOUT */
+.layout {
+  display: flex;
+  gap: 20px;
+}
+
+/* LEFT */
+.left {
+  flex: 2;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+input, textarea, select {
+  width: 100%;
+  margin-top: 5px;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+}
+
+textarea {
+  height: 100px;
+}
+
+/* row*/
+.row {
+  display: flex;
+  gap: 10px;
+}
+
+/* action buttons */
+.actions {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.save {
+  background: #2f6fed;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+}
+
+.cancel {
+  background: #eee;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+}
+
+/* right */
+.right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* box */
+.box {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.title {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* priority */
+.priority {
+  display: flex;
+  gap: 10px;
+}
+
+.priority div {
+  flex: 1;
+  text-align: center;
+  padding: 8px;
+  border-radius: 6px;
+  background: #eee;
+  cursor: pointer;
+}
+
+.priority div.active {
+  background: #2f6fed;
+  color: white;
+}
+
+/* mark button */
+.mark {
+  margin-top: 10px;
+  width: 100%;
+  padding: 8px;
+  background: green;
+  color: white;
+  border: none;
+  border-radius: 6px;
+}

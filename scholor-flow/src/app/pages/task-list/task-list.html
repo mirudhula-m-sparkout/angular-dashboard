@@ -1,0 +1,43 @@
+<div class="page">
+  <app-navbar></app-navbar>
+
+  <div class="content">
+
+    <h2>Task List</h2>
+
+    <div class="cards">
+      <div class="card">Total: {{total}}</div>
+      <div class="card green">Completed: {{completed}}</div>
+      <div class="card red">Pending: {{pending}}</div>
+    </div>
+
+    <button class="add-btn" routerLink="/add-task">+ Add Task</button>
+
+    <table>
+      <tr>
+        <th>Title</th>
+        <th>Status</th>
+        <th>Actions</th>
+      </tr>
+
+      <tr *ngFor="let t of tasks">
+        <td>{{t.title}}</td>
+
+        <td>
+          <span
+            [class.green]="t.status==='Completed'"
+            [class.red]="t.status==='Pending'"
+            [class.orange]="t.status==='In Progress'">
+            {{t.status}}
+          </span>
+        </td>
+
+        <td>
+          <button [routerLink]="['/task', t.id]">👁</button>
+          <button [routerLink]="['/edit-task', t.id]">✏️</button>
+          <button [routerLink]="['/delete-task', t.id]">🗑</button>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>

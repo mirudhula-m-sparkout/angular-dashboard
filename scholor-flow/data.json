@@ -1,0 +1,41 @@
+{
+  "tasks": [
+    {
+      "title": "Springboot",
+      "description": "Springboot",
+      "assignedTo": "Springboot",
+      "priority": "Medium",
+      "dueDate": "0026-02-22",
+      "status": "Pending",
+      "id": "ASWgnW0QjfY"
+    },
+    {
+      "title": "Python-With AI ,ML",
+      "description": "Python is a widely used programming language in the field of Artificial Intelligence (AI) and Machine Learning (ML) due to its simplicity, readability, and extensive library support. AI focuses on creating systems capable of performing tasks that typically require human intelligence, while ML, a subset of AI, enables systems to learn and improve from data without explicit programming.",
+      "assignedTo": "Hendry",
+      "priority": "High",
+      "dueDate": "2026-03-23",
+      "status": "Pending",
+      "id": "McySWq3DtT8"
+    },
+    {
+      "title": "java",
+      "description": "java",
+      "assignedTo": "java",
+      "priority": "Medium",
+      "dueDate": "2026-02-22",
+      "status": "Completed",
+      "id": "PN1A4fjVaHU"
+    },
+    {
+      "title": "Java",
+      "description": "Java",
+      "assignedTo": "Chales heyr",
+      "priority": "Low",
+      "dueDate": "2026-03-20",
+      "status": "Completed",
+      "id": "lPiqVRPreZg"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

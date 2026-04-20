@@ -1,0 +1,43 @@
+<div class="page">
+
+  <div class="content">
+    
+    <h2>Add Task</h2>
+
+    <div class="form">
+
+      <input [(ngModel)]="task.title" placeholder="Title" />
+
+      <textarea [(ngModel)]="task.description" placeholder="Description"></textarea>
+
+      <input [(ngModel)]="task.assignedTo" placeholder="Assigned To" />
+
+      <input type="date" [(ngModel)]="task.dueDate" />
+
+      <div class="priority">
+        <button 
+        [class.active]="task.priority==='High'"
+        (click)="task.priority='High'">
+    High
+  </button>
+
+  <button 
+    [class.active]="task.priority==='Medium'"
+    (click)="task.priority='Medium'">
+    Medium
+  </button>
+
+  <button 
+    [class.active]="task.priority==='Low'"
+    (click)="task.priority='Low'">
+    Low
+  </button>
+</div>
+
+<button class="submit" (click)="submit()">Save</button>
+
+</div>
+ 
+</div>
+
+</div>

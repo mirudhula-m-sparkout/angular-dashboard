@@ -1,0 +1,102 @@
+.page {
+  background: #f5f7fb;
+  min-height: 100vh;
+  font-family: 'Segoe UI';
+}
+
+.container {
+  padding: 20px 40px;
+}
+
+.back {
+  cursor: pointer;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.layout {
+  display: flex;
+  gap: 20px;
+}
+
+.left {
+  flex: 2;
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+}
+
+.right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.tags {
+  display: flex;
+  gap: 10px;
+}
+
+.tag {
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+}
+
+.red {
+  background: #ffe5e5;
+  color: red;
+}
+
+.gray {
+  background: #eee;
+}
+
+.desc {
+  margin: 15px 0;
+}
+
+.info {
+  display: flex;
+  gap: 30px;
+}
+
+button {
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.complete {
+  background: #2f6fed;
+  color: white;
+}
+
+.edit {
+  background: #eee;
+}
+
+.delete {
+  background: red;
+  color: white;
+}
+
+/* .progress-box {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.bar {
+  height: 8px;
+  background: #ddd;
+  margin: 10px 0;
+  border-radius: 5px;
+}
+
+.fill {
+  height: 100%;
+  background: #2f6fed;
+} */

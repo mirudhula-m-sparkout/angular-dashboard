@@ -1,0 +1,75 @@
+<div class="page">
+  <app-navbar></app-navbar>
+
+  <div class="container" *ngIf="task as t; else loading">
+
+    <p class="back" routerLink="/tasks">← Back to tasks</p>
+
+    <div class="layout">
+
+      <div class="left">
+
+        <div class="tags">
+          <span class="tag red">PRIORITY: {{t.priority}}</span>
+          <span class="tag gray">STATUS: {{t.status}}</span>
+        </div>
+
+        <h1>{{t.title}}</h1>
+
+        <p class="desc">{{t.description}}</p>
+
+        <div class="info">
+          <div>
+            <small>ASSIGNED TO</small>
+            <p>{{t.assignedTo}}</p>
+          </div>
+
+          <div>
+            <small>DUE DATE</small>
+            <p>{{t.dueDate | date:'dd MMM yyyy'}}</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="right">
+        
+        <button class="complete"
+        (click)="markCompleted()" [style.background]="t.status  === 'Completed' ? 'green' : ''">
+        {{ t.status === 'Completed' ? '✔ Completed' : '✔ Mark as Complete' }}
+        </button>
+        
+        <button class="edit" (click)="goEdit()">
+          ✏ Edit Task
+        </button>
+
+        <button class="delete"
+          [routerLink]="['/delete-task', t.id]">
+          🗑 Delete
+        </button>
+
+        <!-- <div class="progress-box">
+          <p>Completion Progress</p>
+
+          <div class="bar">
+            <div class="fill"
+              [style.width]="t.status==='Completed' ? '100%' : '60%'">
+            </div>
+          </div>
+
+          <small>
+            {{t.status==='Completed' ? '100%' : '60%'}} Completed
+          </small>
+        </div> -->
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <ng-template #loading>
+    <p style="padding:20px;">Loading task...</p>
+  </ng-template>
+
+</div>

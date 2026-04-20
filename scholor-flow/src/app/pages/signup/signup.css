@@ -1,0 +1,32 @@
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f4f6fb;
+}
+
+.card {
+  width: 300px;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  text-align: center;
+}
+
+input, button {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+}
+
+button {
+  background: #2f6fed;
+  color: white;
+  border: none;
+}
+
+.link {
+  color: #2f6fed;
+  cursor: pointer;
+}

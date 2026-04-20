@@ -1,0 +1,43 @@
+.page {
+  background: #dd6363;
+  min-height: 100vh;
+  font-family: Arial;
+}
+
+.content {
+  padding: 20px;
+}
+
+.cards {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.card {
+  flex: 1;
+  padding: 10px;
+  background: white;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.green { color: green; }
+.red { color: red; }
+.orange { color: orange; }
+
+.add-btn {
+  margin: 10px 0;
+  padding: 8px 12px;
+}
+
+table {
+  width: 100%;
+  background: white;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 10px;
+}

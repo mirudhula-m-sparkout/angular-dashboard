@@ -1,0 +1,31 @@
+<div class="login-container">
+  <div class="login-card">
+
+    <h2 class="logo">ScholarFlow</h2>
+    <p class="subtitle">Student Task Manager</p>
+
+    <!--This line prevent the auto submit -->
+    <form (ngSubmit)="login()" #f="ngForm">
+
+      <label>USERNAME</label>
+      <input type="text" [(ngModel)]="username" name="username" required>
+
+      <label>PASSWORD</label>
+      <input type="password" [(ngModel)]="password" name="password" required>
+
+      <!-- only submit when valid -->
+      <button type="submit" [disabled]="!f.valid">
+        Access Workspace →
+      </button>
+
+    </form>
+
+    <div class="links">
+      <p>New user?</p>
+      <button type="button" class="signup-btn" (click)="goToSignup()">
+        Sign Up
+      </button>
+
+    </div>
+  </div>
+</div>
