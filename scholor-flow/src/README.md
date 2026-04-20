@@ -77,7 +77,7 @@ Angular-based Task Manager application with authentication and task tracking fea
 
 
 ### Dashboard
-![Dashboard](screenshots/dashboard.png)
+![Dashboard](D:\MyAngularProject\scholor-flow\public\screenshots\dashboard.png)
 
 ### Task List
 ![Task List](screenshots/tasklist.png)
