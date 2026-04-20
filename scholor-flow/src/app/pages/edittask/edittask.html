@@ -1,77 +1,47 @@
 <div class="page">
-
   <app-navbar></app-navbar>
 
-  <div class="container" *ngIf="task as t; else loading">
+  <div class="content">
 
-    <p class="breadcrumb">Task List > Edit Task</p>
+    <h2>Edit Task(Update)</h2>
 
-    <h1>Refine Your Focus.</h1>
-    <p class="sub">Update the details of your assignment</p>
+    <div class="form" *ngIf="task">
 
-    <div class="layout">
+      <input [(ngModel)]="task.title" placeholder="Title" />
 
-      <div class="left">
+      <textarea [(ngModel)]="task.description" placeholder="Description"></textarea>
 
-        <label>Task Title</label>
-        <input [(ngModel)]="t.title">
+      <input [(ngModel)]="task.assignedTo" placeholder="Assigned To" />
 
-        <label>Description & Notes</label>
-        <textarea [(ngModel)]="t.description"></textarea>
+      <input type="date" [(ngModel)]="task.dueDate" />
 
-        <div class="row">
-          <div>
-            <label>Due Date</label>
-            <input type="date" [(ngModel)]="t.dueDate">
-          </div>
+      <div class="priority">
 
-          <div>
-            <label>Subject</label>
-            <input placeholder="General">
-          </div>
-        </div>
+        <button
+          [class.active]="task.priority === 'High'"
+          (click)="task.priority = 'High'">
+          High
+        </button>
 
-        <div class="actions">
-          <button class="save" (click)="updateTask()">Save Changes</button>
-          <button class="cancel" routerLink="/tasks">Discard</button>
-        </div>
+        <button
+          [class.active]="task.priority === 'Medium'"
+          (click)="task.priority = 'Medium'">
+          Medium
+        </button>
 
-      </div>
-
-      <div class="right">
-
-        <div class="box">
-          <p class="title">Current Status</p>
-
-          <select [(ngModel)]="t.status">
-            <option>Pending</option>
-            <option>In Progress</option>
-            <option>Completed</option>
-          </select>
-
-          <button class="mark" (click)="t.status='Completed'">
-            ✔ Mark Complete
-          </button>
-        </div>
-
-        <div class="box">
-          <p class="title">Task Priority</p>
-
-          <div class="priority">
-            <div (click)="t.priority='High'" [class.active]="t.priority==='High'">High</div>
-            <div (click)="t.priority='Medium'" [class.active]="t.priority==='Medium'">Medium</div>
-            <div (click)="t.priority='Low'" [class.active]="t.priority==='Low'">Low</div>
-          </div>
-        </div>
+        <button
+          [class.active]="task.priority === 'Low'"
+          (click)="task.priority = 'Low'">
+          Low
+        </button>
 
       </div>
+
+      <button class="submit" (click)="updateTask()">
+        Update
+      </button>
 
     </div>
 
   </div>
-
-  <ng-template #loading>
-    <p style="padding:20px;">Loading task...</p>
-  </ng-template>
-
 </div>

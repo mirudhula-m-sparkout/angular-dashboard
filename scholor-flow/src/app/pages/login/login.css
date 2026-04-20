@@ -4,6 +4,10 @@
   justify-content: center;
   align-items: center;
   background: #f5f7fb;
+  background-image: url('/login.png');
+   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .login-card {
@@ -35,7 +39,7 @@ input {
 button {
   width: 100%;
   padding: 10px;
-  background: #4f46e5;
+  background:#2db2c6;;
   color: white;
   border: none;
   cursor: pointer;

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { TaskService, Task } from '../../services/taskservice';
 import { CommonModule } from '@angular/common';
@@ -7,8 +7,12 @@ import { Navbar } from '../navbar/navbar';
 
 @Component({
   selector: 'app-edittask',
-  standalone: true,
-  imports: [CommonModule, FormsModule, Navbar, RouterModule],
+  imports: [
+    CommonModule, 
+    FormsModule, 
+    RouterModule, 
+    Navbar
+  ],
   templateUrl: './edittask.html',
   styleUrl: './edittask.css',
 })
@@ -19,10 +23,15 @@ export class Edittask implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private service: TaskService,
-    private router: Router
+    private router: Router,
+    private cd: ChangeDetectorRef
   ) {}
 
   ngOnInit() {
+    this.loadTask();
+  }
+
+  loadTask() {
     const id = this.route.snapshot.paramMap.get('id');
 
     if (!id) {
@@ -30,10 +39,19 @@ export class Edittask implements OnInit {
       return;
     }
 
-    //this.service.ensureLoaded();
-
     this.service.getTaskById(id).subscribe({
-      next: (res) => this.task = res,
+      next: (res) => {
+        this.task = {
+          id: res.id,
+          title: res.title,
+          description: res.description,
+          assignedTo: res.assignedTo,
+          priority: res.priority,
+          dueDate: res.dueDate,
+          status: res.status
+        };
+        this.cd.detectChanges();
+      },
       error: () => this.router.navigate(['/tasks'])
     });
   }
@@ -42,7 +60,10 @@ export class Edittask implements OnInit {
     if (!this.task) return;
 
     this.service.updateTask(this.task).subscribe(() => {
+      //this.task!.id: (!) = typeScript non-null assertion operator
+
       this.router.navigate(['/task', this.task!.id]);
     });
   }
 }
+

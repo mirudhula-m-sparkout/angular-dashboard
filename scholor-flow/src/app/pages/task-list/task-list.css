@@ -1,5 +1,38 @@
+
+/* Navbar :css */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  background: white;
+  border-bottom: 1px solid #ddd;
+}
+
+.logo {
+  color: #0e0e0e;;
+}
+
+.nav-links {
+  display: flex;
+  gap: 10px;
+}
+
+.nav {
+  padding: 6px 12px;
+  cursor: pointer;
+  color: #555;
+  border-radius: 5px;
+}
+
+.nav.active {
+  background: #a7e5ee;
+  color: rgb(0, 0, 0);
+}
+
+
+/* Table:css */
 .page {
-  background: #dd6363;
+  background:#87dfed;
   min-height: 100vh;
   font-family: Arial;
 }
@@ -29,6 +62,8 @@
 .add-btn {
   margin: 10px 0;
   padding: 8px 12px;
+  background-color: rgb(151, 149, 149);
+  color: white;
 }
 
 table {

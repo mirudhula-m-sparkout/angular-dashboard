@@ -35,7 +35,7 @@ export class TaskService {
     this.http.get<Task[]>(this.API_URL)
       .subscribe(data => this.tasksSubject.next(data));
   }
-
+  
   getTasks() {
     return this.tasks$;
   }

@@ -25,7 +25,7 @@ export const routes: Routes = [
   { path: 'add-task', component: Addtask, canActivate: [authGuard] },
 
   { path: 'task/:id', component: Taskdetail, canActivate: [authGuard] },
-  { path: 'edit-task/:id', component: Edittask, canActivate: [authGuard] },
+  { path: 'edittask/:id', component: Edittask, canActivate: [authGuard] },
   { path: 'delete-task/:id', component: Deletetask, canActivate: [authGuard] },
 
   { path: '**', redirectTo: 'login' }

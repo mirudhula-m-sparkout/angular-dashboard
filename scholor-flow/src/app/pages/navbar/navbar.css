@@ -7,7 +7,7 @@
 }
 
 .logo {
-  color: #2f6fed;
+  color: #0e0e0e;;
 }
 
 .nav-links {
@@ -23,6 +23,6 @@
 }
 
 .nav.active {
-  background: #2f6fed;
-  color: white;
+  background: #a7e5ee;
+  color: rgb(0, 0, 0);
 }

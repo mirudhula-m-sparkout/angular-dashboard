@@ -1,6 +1,7 @@
 <div class="page">
-  <app-navbar></app-navbar>
 
+  <app-navbar></app-navbar>
+  
   <div class="content">
 
     <h2>Task List</h2>
@@ -11,7 +12,7 @@
       <div class="card red">Pending: {{pending}}</div>
     </div>
 
-    <button class="add-btn" routerLink="/add-task">+ Add Task</button>
+    <button class="add-btn" routerLink="/add-task">Add Task</button>
 
     <table>
       <tr>
@@ -34,7 +35,7 @@
 
         <td>
           <button [routerLink]="['/task', t.id]">👁</button>
-          <button [routerLink]="['/edit-task', t.id]">✏️</button>
+          <button [routerLink]="['/edittask', t.id]">✏️</button>
           <button [routerLink]="['/delete-task', t.id]">🗑</button>
         </td>
       </tr>

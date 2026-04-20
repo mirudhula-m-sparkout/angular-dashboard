@@ -2,20 +2,15 @@
   <app-navbar></app-navbar>
 
   <div class="container" *ngIf="task as t; else loading">
-
     <p class="back" routerLink="/tasks">← Back to tasks</p>
-
     <div class="layout">
-
       <div class="left">
-
         <div class="tags">
           <span class="tag red">PRIORITY: {{t.priority}}</span>
           <span class="tag gray">STATUS: {{t.status}}</span>
         </div>
 
         <h1>{{t.title}}</h1>
-
         <p class="desc">{{t.description}}</p>
 
         <div class="info">
@@ -23,13 +18,11 @@
             <small>ASSIGNED TO</small>
             <p>{{t.assignedTo}}</p>
           </div>
-
           <div>
             <small>DUE DATE</small>
             <p>{{t.dueDate | date:'dd MMM yyyy'}}</p>
           </div>
         </div>
-
       </div>
 
       <div class="right">
@@ -38,7 +31,7 @@
         (click)="markCompleted()" [style.background]="t.status  === 'Completed' ? 'green' : ''">
         {{ t.status === 'Completed' ? '✔ Completed' : '✔ Mark as Complete' }}
         </button>
-        
+
         <button class="edit" (click)="goEdit()">
           ✏ Edit Task
         </button>
@@ -62,12 +55,9 @@
           </small>
         </div> -->
 
-      </div>
-
+     </div>
     </div>
-
   </div>
-
   <ng-template #loading>
     <p style="padding:20px;">Loading task...</p>
   </ng-template>

@@ -7,7 +7,11 @@ import { Navbar } from '../navbar/navbar';
 @Component({
   selector: 'app-task-list',
   standalone: true,
-  imports: [CommonModule, RouterModule, Navbar],
+  imports: [
+    CommonModule, 
+    RouterModule, 
+    Navbar
+  ],
   templateUrl: './task-list.html',
   styleUrl: './task-list.css',
 })

@@ -1,6 +1,6 @@
 .page {
   font-family: 'Segoe UI';
-  background: #fd7e7e;
+  background:  #87dfed;
   min-height: 100vh;
 }
 
@@ -41,14 +41,14 @@ input, textarea {
 
 /* selected */
 .priority button.active {
-  background: #2f6fed;
+  background: #246061;
   color: white;
 }
 
 /* submit*/
 .submit {
-  background: #2f6fed;
-  color: white;
+  background: #00cffe;
+  color: black;
   border: none;
   padding: 8px;
 }

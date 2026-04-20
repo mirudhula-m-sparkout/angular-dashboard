@@ -5,13 +5,15 @@
     <span class="nav"
           routerLink="/dashboard"
           routerLinkActive="active"
-          [routerLinkActiveOptions]="{ exact: true }">
+          [routerLinkActiveOptions]="{ exact: true}">
       Dashboard
     </span>
 
     <span class="nav"
           routerLink="/tasks"
-          routerLinkActive="active">
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{exact:true}"
+          >
       Task List
     </span>
   </div>

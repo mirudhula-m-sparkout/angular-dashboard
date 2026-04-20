@@ -17,10 +17,9 @@ export class Dashboard implements OnInit {
   pending = 0;
 
   constructor(private taskService: TaskService) {}
-
+  
   ngOnInit() {
     this.taskService.fetchTasks();
-
     this.taskService.getTasks().subscribe(tasks => {
       this.total = tasks.length;
       this.completed = tasks.filter(t => t.status === 'Completed').length;

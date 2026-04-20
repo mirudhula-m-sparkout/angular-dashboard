@@ -25,7 +25,7 @@ export class Taskdetail implements OnInit {
 
   ngOnInit() {
     const id = this.route.snapshot.paramMap.get('id');
-
+    
     if (!id) {
       this.router.navigate(['/tasks']);
       return;
@@ -57,7 +57,7 @@ export class Taskdetail implements OnInit {
     this.task = res;
     this.cd.detectChanges();
   });
-}
+ }
 
   goEdit() {
     if (!this.task?.id) return;

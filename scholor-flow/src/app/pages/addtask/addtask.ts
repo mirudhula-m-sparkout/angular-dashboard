@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
+import { Navbar } from '../navbar/navbar';
 
 @Component({
   selector: 'app-addtask',
@@ -11,7 +12,8 @@ import { Router } from '@angular/router';
   imports: [
     RouterModule,
     CommonModule,
-    FormsModule
+    FormsModule,
+    Navbar
   ],
   templateUrl: './addtask.html',
   styleUrl: './addtask.css',
