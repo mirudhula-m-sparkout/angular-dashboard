@@ -1,0 +1,43 @@
+<h3>User, Posts, Comments Dashboard Cards</h3>
+
+<!--
+First Code (user + posts + comments)
+forkJoin({
+  user: this.http.get('users/1'),
+  posts: this.http.get('users/1/posts'),
+  comments: this.http.get('users/1/comments')
+})
+Structure: object { user, posts, comments }
+Result: one object
+results = {
+  user: {...},
+  posts: [...],
+  comments: [...]
+}
+Use-case:
+Single user, multiple related calls-->
+
+<div *ngIf="loading">Loading...</div>
+
+<div *ngIf="!loading" class="container">
+  <div class="card">
+    <h2>User Info</h2>
+    <p><b>Name:</b> {{ user?.name }}</p>
+    <p><b>Email:</b> {{ user?.email }}</p>
+  </div>
+
+  <div class="card">
+    <h2>User Posts</h2>
+    <ul>
+      <li *ngFor="let post of posts">{{ post.title }}</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>User Comments</h2>
+    <ul>
+      <li *ngFor="let cm of comments">{{ cm.body }}</li>
+    </ul>
+  </div>
+
+</div>

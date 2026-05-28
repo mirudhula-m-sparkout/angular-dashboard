@@ -1,0 +1,23 @@
+<h3>Share:No store data</h3>
+<p>Sharable only instant time ,the component loads same time share data</p>
+
+<h3>ShareReplay: Store Data</h3>
+<p>Sharable ,if sharable 1=then the data latest  data stored else,it will store log from start till present</p>
+<h2>share() - Same Time (700ms)</h2>
+
+<hr>
+<h2>share()</h2>
+<button (click)="runShare()">Run Share</button>
+
+<p>Immediate: {{ share1?.name }}</p>
+<p>Late: {{ share2?.name || 'No Data yet' }}</p>
+<p>API Calls: {{ service.shareCount }}</p>
+
+<hr>
+
+<h2>shareReplay(1)</h2>
+<button (click)="runReplay()">Run Replay</button>
+
+<p>Immediate: {{ replay1?.name }}</p>
+<p>Late: {{ replay2?.name || 'No Data yet' }}</p>
+<p>API Calls: {{ service.replayCount }}</p>

@@ -1,0 +1,38 @@
+.container {
+  width: 600px;
+  margin: auto;
+  font-family: Arial;
+}
+
+.form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+input {
+  padding: 6px;
+  flex: 1;
+}
+
+button {
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+td, th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.api-box {
+  background: #322b56;
+  padding: 8px;
+  margin-bottom: 10px;
+}

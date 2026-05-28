@@ -1,0 +1,40 @@
+<nav class="nav">
+
+  <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+    Home
+  </a>
+
+  <a routerLink="/notifications" routerLinkActive="active">
+    ReplaySubject1
+  </a>
+
+  <a routerLink="/replaysubject2" routerLinkActive="active">
+    ReplaySubject2
+  </a>
+
+  <a routerLink="/asyncsubcom" routerLinkActive="active">
+    AsyncSubject
+  </a>
+
+   <a routerLink="/rxjsoperations" routerLinkActive="active">
+    RxJS-operations
+  </a>
+
+  <a routerLink="/interceptor-section" routerLinkActive="active">
+  HTTP Interceptor
+  </a>
+
+  <a routerLink="/signal-section" routerLinkActive="active">
+    Signals
+  </a>
+  
+  <a routerLink="/forms" routerLinkActive="active">
+    Forms
+  </a>
+
+  <a routerLink="/user-component" routerLinkActive="active">
+    User Component
+  </a>  
+</nav>
+
+<router-outlet></router-outlet>

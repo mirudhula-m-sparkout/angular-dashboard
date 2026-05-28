@@ -1,0 +1,31 @@
+body {
+  margin: 0;
+  font-family: Arial;
+}
+
+.nav {
+  background: #2c3e50;
+  padding: 12px;
+  display: flex;
+  gap: 20px;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.nav a:hover {
+  background: #34495e;
+}
+
+.active {
+  background: #1abc9c;
+}
+
+.container {
+  padding: 20px;
+}

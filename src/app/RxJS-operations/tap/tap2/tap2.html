@@ -1,0 +1,16 @@
+
+<button (click)="loadUsers()">
+  Load Users
+</button>
+
+<button (click)="loadOrders()">
+  Load Orders
+</button>
+
+<div *ngIf="users.length">
+  Users: {{ users.length }}
+</div>
+
+<div *ngIf="orders.length">
+  Orders: {{ orders.length }}
+</div> 
